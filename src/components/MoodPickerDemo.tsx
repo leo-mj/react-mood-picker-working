@@ -4,43 +4,17 @@ function MoodPickerDemo(): JSX.Element {
   const [moodValueFromCurrentRender, queueRerenderWithNewMoodValue] =
     useState("confused");
 
-  const handleMoodChangeToHappy = () => {
-    const nextMood = "happy";
-    queueRerenderWithNewMoodValue(nextMood);
-    console.log(
-      "😀 queued a rerender with mood as",
-      nextMood,
-      "but in this render it is still",
-      moodValueFromCurrentRender
-    );
-  };
+  const handleMoodChangeToHappy = () => queueRerenderWithNewMoodValue("happy");
 
-  const handleMoodChangeToConfused = () => {
-    const nextMood = "confused";
-    queueRerenderWithNewMoodValue(nextMood);
-    console.log(
-      "🤔 queued a rerender with mood as",
-      nextMood,
-      "but in this render it is still",
-      moodValueFromCurrentRender
-    );
-  };
+  const handleMoodChangeToConfused = () => queueRerenderWithNewMoodValue("confused");
 
-  const handleMoodChangeToSad = () => {
-    const nextMood = "sad";
-    queueRerenderWithNewMoodValue(nextMood);
-    console.log(
-      "😢 queued a rerender with mood as",
-      nextMood,
-      "but in this render it is still",
-      moodValueFromCurrentRender
-    );
-  };
+  const handleMoodChangeToSad = () => queueRerenderWithNewMoodValue("sad");
+  
+  const handleMoodChangeToOnFire = () => queueRerenderWithNewMoodValue("on fire");
 
-  console.log(
-    "Component is rendering with a mood value of",
-    moodValueFromCurrentRender
-  );
+  const handleMoodChangeToProductive = () => queueRerenderWithNewMoodValue("productive");
+
+  const handleMoodChangeToSpiky = () => queueRerenderWithNewMoodValue("spiky");
 
   return (
     <>
@@ -49,6 +23,9 @@ function MoodPickerDemo(): JSX.Element {
       <button onClick={handleMoodChangeToHappy}>😀</button>
       <button onClick={handleMoodChangeToConfused}>🤔</button>
       <button onClick={handleMoodChangeToSad}>😢</button>
+      <button onClick={handleMoodChangeToOnFire}>🔥</button>
+      <button onClick={handleMoodChangeToProductive}>🏭</button>
+      <button onClick={handleMoodChangeToSpiky}>🦔</button>
     </>
   );
 }
