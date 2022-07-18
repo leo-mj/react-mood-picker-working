@@ -6,13 +6,16 @@ function MoodPickerDemo(): JSX.Element {
 
   const handleMoodChangeToHappy = () => queueRerenderWithNewMoodValue("happy");
 
-  const handleMoodChangeToConfused = () => queueRerenderWithNewMoodValue("confused");
+  const handleMoodChangeToConfused = () =>
+    queueRerenderWithNewMoodValue("confused");
 
   const handleMoodChangeToSad = () => queueRerenderWithNewMoodValue("sad");
-  
-  const handleMoodChangeToOnFire = () => queueRerenderWithNewMoodValue("on fire");
 
-  const handleMoodChangeToProductive = () => queueRerenderWithNewMoodValue("productive");
+  const handleMoodChangeToOnFire = () =>
+    queueRerenderWithNewMoodValue("on fire");
+
+  const handleMoodChangeToProductive = () =>
+    queueRerenderWithNewMoodValue("productive");
 
   const handleMoodChangeToSpiky = () => queueRerenderWithNewMoodValue("spiky");
 
